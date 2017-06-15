@@ -1,0 +1,16 @@
+program aioooi
+var a, b, c: integer;
+    n,j,k : real;
+    to:real;
+    make:integer;
+    begin
+        read(n);
+        if[n<5]{
+            while [n<3]{
+               read(n);
+            }
+        }else{
+            write(c);
+        }
+        read(a);
+    end

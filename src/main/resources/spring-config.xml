@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd">
+    <context:annotation-config />
+    <context:component-scan base-package="com.analizator"/>
+    <bean class="java.io.FileReader" id="fileReader" c:_0="/home/alexandr/Documents/KpiTEFstudy/Web/Analizer_Production/src/main/resources/program.txt"/>
+    <bean class="java.io.BufferedReader" id="bufferedReader" c:_0-ref="fileReader"/>
+    <bean class="java.io.FileReader" id="fileReader1" c:_0="/home/alexandr/Documents/KpiTEFstudy/Web/Analizer_Production/src/main/resources/stages.txt"/>
+    <bean class="java.io.BufferedReader" id="bufferedReader1" c:_0-ref="fileReader1"/>
+    <util:constant id = "in" static-field="java.lang.System.in" />
+    <bean class="java.io.InputStreamReader" id="inputStreamReader" c:_0-ref="in"/>
+    <bean class="java.io.BufferedReader" id="bufferedReaderForExecutor" c:_0-ref="inputStreamReader"/>
+    <util:list id="constantsLex" list-class="java.util.ArrayList" scope="prototype"/>
+    <util:list id="identifiersLex" list-class="java.util.ArrayList" scope="prototype"/>
+    <util:list id="outputLex" list-class="java.util.ArrayList" scope="prototype"/>
+    <util:list id="programLinesLex" list-class="java.util.ArrayList" scope="prototype"/>
+    <util:list id="jumpArray" list-class="java.util.ArrayList" scope="prototype"/>
+    <util:list id="stageArray" list-class="java.util.ArrayList" scope="prototype"/>
+    <util:list id="stageStack" list-class="java.util.ArrayList" scope="prototype"/>
+    <util:list id="list" list-class="java.util.ArrayList" scope="prototype"/>
+    <util:list id="timePolis" list-class="java.util.ArrayList" scope="prototype"/>
+    <util:list id="timeStack" list-class="java.util.ArrayList" scope="prototype"/>
+    <util:list id="data" list-class="java.util.ArrayList" scope="prototype"/>
+    <util:list id="labels" list-class="java.util.ArrayList" scope="prototype"/>
+    <util:list id="whileLabels" list-class="java.util.ArrayList" scope="prototype"/>
+    <util:list id="executionStack" list-class="java.util.ArrayList" scope="prototype"/>
+</beans>
