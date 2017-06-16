@@ -20,8 +20,8 @@ VN = {[program], [program name], [ad list], [ad], [type], [id list], [operator l
       [id], [kft], [int], [loop], [logical expression], [logical term], [logical multiplier]
       [relation], [relation sign], [condition], [number], [letter], [code]}
       
-[program] ::= program [program name] var [ad list] begin { [code] } end
-[program name] ::= [id]
+[program] ::= program [program name] var [ad list] begin { [code] } end \n
+[program name] ::= [id] \n
 [ad list] ::= [ad] | [ad list]; [ad]
 [ad] ::= [id list] : [type]
 [type] ::= integer | real
